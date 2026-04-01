@@ -18,6 +18,15 @@
 /* Hide default scrollbar for details content */
 details > summary { list-style: none; }
 details > summary::-webkit-details-marker { display: none; }
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    .reveal-word { transform: none !important; }
+}
 </style>
 </head>
 <body class="bg-[#E3E7E0] text-[#2A3324] font-sans-custom font-light antialiased relative overflow-x-hidden">
@@ -393,6 +402,45 @@ details > summary::-webkit-details-marker { display: none; }
                 }
             });
         });
+
+        const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        if (!prefersReduced) {
+            // Service items stagger reveal
+            gsap.utils.toArray('#services-list .group').forEach((item, i) => {
+                gsap.fromTo(item,
+                    { y: 60, opacity: 0 },
+                    {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.8,
+                        ease: 'power2.out',
+                        scrollTrigger: {
+                            trigger: item,
+                            start: 'top 85%',
+                            toggleActions: 'play none none none'
+                        }
+                    }
+                );
+            });
+
+            // Amenity cards cascade
+            gsap.fromTo('.grid.grid-cols-1.sm\\:grid-cols-2 > div',
+                { y: 50, opacity: 0, scale: 0.95 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    scale: 1,
+                    stagger: 0.1,
+                    duration: 0.6,
+                    ease: 'power2.out',
+                    scrollTrigger: {
+                        trigger: '.grid.grid-cols-1.sm\\:grid-cols-2',
+                        start: 'top 80%'
+                    }
+                }
+            );
+        }
 
         // --- WebGL Column Split Logic ---
         const canvas = document.createElement('canvas');
