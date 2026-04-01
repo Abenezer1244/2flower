@@ -227,31 +227,35 @@ html { scroll-behavior: smooth; }
                 <!-- Send a Message Form -->
                 <div class="lg:col-span-7">
                     <h2 class="font-serif-custom text-3xl md:text-4xl tracking-tight font-normal mb-10 reveal-text">Send a Message</h2>
-                    <form class="flex flex-col gap-8 w-full form-animate">
+                    <form action="https://api.web3forms.com/submit" method="POST" class="flex flex-col gap-8 w-full form-animate">
+                        <input type="hidden" name="access_key" value="7ba51ad6-f941-4908-b3a6-729069dce4e9">
+                        <input type="hidden" name="subject" value="New Inquiry from Flower AFH Website">
+                        <input type="hidden" name="from_name" value="Flower AFH Website">
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div class="relative">
-                                <input type="text" id="firstName" class="w-full bg-transparent border-b border-[#C4CFC0] py-4 text-base outline-none focus:border-[#2A3324] transition-colors placeholder:text-transparent peer" placeholder="First Name" required="">
+                                <input type="text" id="firstName" name="first_name" class="w-full bg-transparent border-b border-[#C4CFC0] py-4 text-base outline-none focus:border-[#2A3324] transition-colors placeholder:text-transparent peer" placeholder="First Name" required="">
                                 <label for="firstName" class="absolute left-0 top-4 text-[#2A3324]/50 transition-all peer-focus:-top-3 peer-focus:text-xs peer-focus:text-[#2A3324] peer-valid:-top-3 peer-valid:text-xs peer-valid:text-[#2A3324] cursor-text">First Name</label>
                             </div>
                             <div class="relative">
-                                <input type="text" id="lastName" class="w-full bg-transparent border-b border-[#C4CFC0] py-4 text-base outline-none focus:border-[#2A3324] transition-colors placeholder:text-transparent peer" placeholder="Last Name" required="">
+                                <input type="text" id="lastName" name="last_name" class="w-full bg-transparent border-b border-[#C4CFC0] py-4 text-base outline-none focus:border-[#2A3324] transition-colors placeholder:text-transparent peer" placeholder="Last Name" required="">
                                 <label for="lastName" class="absolute left-0 top-4 text-[#2A3324]/50 transition-all peer-focus:-top-3 peer-focus:text-xs peer-focus:text-[#2A3324] peer-valid:-top-3 peer-valid:text-xs peer-valid:text-[#2A3324] cursor-text">Last Name</label>
                             </div>
                         </div>
-                        
+
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div class="relative">
-                                <input type="email" id="email" class="w-full bg-transparent border-b border-[#C4CFC0] py-4 text-base outline-none focus:border-[#2A3324] transition-colors placeholder:text-transparent peer" placeholder="Email Address" required="">
+                                <input type="email" id="email" name="email" class="w-full bg-transparent border-b border-[#C4CFC0] py-4 text-base outline-none focus:border-[#2A3324] transition-colors placeholder:text-transparent peer" placeholder="Email Address" required="">
                                 <label for="email" class="absolute left-0 top-4 text-[#2A3324]/50 transition-all peer-focus:-top-3 peer-focus:text-xs peer-focus:text-[#2A3324] peer-valid:-top-3 peer-valid:text-xs peer-valid:text-[#2A3324] cursor-text">Email Address</label>
                             </div>
                             <div class="relative">
-                                <input type="tel" id="phone" class="w-full bg-transparent border-b border-[#C4CFC0] py-4 text-base outline-none focus:border-[#2A3324] transition-colors placeholder:text-transparent peer" placeholder="Phone Number">
+                                <input type="tel" id="phone" name="phone" class="w-full bg-transparent border-b border-[#C4CFC0] py-4 text-base outline-none focus:border-[#2A3324] transition-colors placeholder:text-transparent peer" placeholder="Phone Number">
                                 <label for="phone" class="absolute left-0 top-4 text-[#2A3324]/50 transition-all peer-focus:-top-3 peer-focus:text-xs peer-focus:text-[#2A3324] peer-valid:-top-3 peer-valid:text-xs peer-valid:text-[#2A3324] cursor-text">Phone Number</label>
                             </div>
                         </div>
 
                         <div class="relative mt-4">
-                            <textarea id="message" rows="4" class="w-full bg-transparent border-b border-[#C4CFC0] py-4 text-base outline-none focus:border-[#2A3324] transition-colors placeholder:text-transparent peer resize-none" placeholder="How can we help?" required=""></textarea>
+                            <textarea id="message" name="message" rows="4" class="w-full bg-transparent border-b border-[#C4CFC0] py-4 text-base outline-none focus:border-[#2A3324] transition-colors placeholder:text-transparent peer resize-none" placeholder="How can we help?" required=""></textarea>
                             <label for="message" class="absolute left-0 top-4 text-[#2A3324]/50 transition-all peer-focus:-top-3 peer-focus:text-xs peer-focus:text-[#2A3324] peer-valid:-top-3 peer-valid:text-xs peer-valid:text-[#2A3324] cursor-text">How can we help?</label>
                         </div>
 
@@ -264,6 +268,11 @@ html { scroll-behavior: smooth; }
                             </button>
                         </div>
                     </form>
+                    <div id="form-success" class="hidden py-12 text-center">
+                        <iconify-icon icon="solar:check-circle-linear" class="text-5xl text-[#5C715E] mb-4" style="stroke-width: 1.5;"></iconify-icon>
+                        <h3 class="font-serif-custom text-2xl tracking-tight font-normal mb-2">Thank You!</h3>
+                        <p class="text-base text-[#2A3324]/70 font-light">Your message has been sent. We'll get back to you shortly.</p>
+                    </div>
                 </div>
 
                 <!-- Info (Phone, Location, Email) -->
@@ -364,6 +373,27 @@ html { scroll-behavior: smooth; }
             </div>
         </div>
     </footer>
+
+    <!-- Web3Forms Submission Script -->
+    <script>
+    document.querySelectorAll('form[action*="web3forms"]').forEach(form => {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(form);
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            }).then(res => res.json()).then(data => {
+                if (data.success) {
+                    form.style.display = 'none';
+                    form.parentElement.querySelector('#form-success').classList.remove('hidden');
+                }
+            }).catch(err => {
+                alert('Something went wrong. Please try again or call us directly.');
+            });
+        });
+    });
+    </script>
 
     <!-- Animation Scripts -->
     <script>

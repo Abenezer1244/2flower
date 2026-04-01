@@ -508,30 +508,29 @@ canvas { max-width: 100% !important; }
 
                 <div class="bg-[#D5DBD1] p-8 md:p-12 border-t-2 border-[#2A3324] flex flex-col justify-center relative">
                     <h3 class="font-serif-custom text-2xl tracking-tight font-normal mb-8">Inquiry Form</h3>
-                    <form class="flex flex-col gap-8 relative z-10">
+                    <form action="https://api.web3forms.com/submit" method="POST" class="flex flex-col gap-8 relative z-10">
+                        <input type="hidden" name="access_key" value="7ba51ad6-f941-4908-b3a6-729069dce4e9">
+                        <input type="hidden" name="subject" value="New Inquiry from Flower AFH Website">
+                        <input type="hidden" name="from_name" value="Flower AFH Website">
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
                         <div class="relative">
-                            <input type="text" id="name" class="w-full bg-transparent border-b border-[#2A3324]/30 py-4 text-base focus:outline-none focus:border-[#2A3324] transition-colors placeholder-[#2A3324]/50" placeholder="Your Full Name">
+                            <input type="text" id="name" name="name" class="w-full bg-transparent border-b border-[#2A3324]/30 py-4 text-base focus:outline-none focus:border-[#2A3324] transition-colors placeholder-[#2A3324]/50" placeholder="Your Full Name">
                         </div>
                         <div class="relative">
-                            <input type="email" id="email" class="w-full bg-transparent border-b border-[#2A3324]/30 py-4 text-base focus:outline-none focus:border-[#2A3324] transition-colors placeholder-[#2A3324]/50" placeholder="Email Address">
-                        </div>
-                        
-                        <!-- Custom Select Dropdown UI -->
-                        <div class="relative group cursor-pointer">
-                            <div class="w-full bg-transparent border-b border-[#2A3324]/30 py-4 flex items-center justify-between group-hover:border-[#2A3324] transition-colors">
-                                <span class="text-base text-[#2A3324]/50 group-hover:text-[#2A3324] transition-colors">Nature of Inquiry</span>
-                                <iconify-icon icon="solar:alt-arrow-down-linear" class="text-xl text-[#2A3324]/50 group-hover:text-[#2A3324] transition-colors" style="stroke-width: 1.5;"></iconify-icon>
-                            </div>
-                            <!-- Mock Dropdown Content -->
-                            <div class="absolute left-0 top-full mt-1 w-full bg-[#FFFFFF] border border-[#C4CFC0] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-20 shadow-sm">
-                                <div class="p-3 text-sm hover:bg-[#D5DBD1] transition-colors">Schedule a Tour</div>
-                                <div class="p-3 text-sm hover:bg-[#D5DBD1] transition-colors">Pricing Details</div>
-                                <div class="p-3 text-sm hover:bg-[#D5DBD1] transition-colors">Care Assessment</div>
-                            </div>
+                            <input type="email" id="email" name="email" class="w-full bg-transparent border-b border-[#2A3324]/30 py-4 text-base focus:outline-none focus:border-[#2A3324] transition-colors placeholder-[#2A3324]/50" placeholder="Email Address">
                         </div>
 
                         <div class="relative">
-                            <textarea id="message" rows="3" class="w-full bg-transparent border-b border-[#2A3324]/30 py-4 text-base focus:outline-none focus:border-[#2A3324] transition-colors resize-none placeholder-[#2A3324]/50" placeholder="How can we help you?"></textarea>
+                            <select name="inquiry_type" class="w-full bg-transparent border-b border-[#2A3324]/30 py-4 text-base font-light focus:outline-none focus:border-[#2A3324] transition-colors text-[#2A3324]/50 focus:text-[#2A3324] appearance-none cursor-pointer">
+                                <option value="" disabled selected>Nature of Inquiry</option>
+                                <option value="Schedule a Tour">Schedule a Tour</option>
+                                <option value="Pricing Details">Pricing Details</option>
+                                <option value="Care Assessment">Care Assessment</option>
+                            </select>
+                        </div>
+
+                        <div class="relative">
+                            <textarea id="message" name="message" rows="3" class="w-full bg-transparent border-b border-[#2A3324]/30 py-4 text-base focus:outline-none focus:border-[#2A3324] transition-colors resize-none placeholder-[#2A3324]/50" placeholder="How can we help you?"></textarea>
                         </div>
 
                         <!-- Custom Checkbox -->
@@ -542,12 +541,17 @@ canvas { max-width: 100% !important; }
                             </div>
                             <span class="text-sm text-[#2A3324]/70 group-hover:text-[#2A3324] transition-colors leading-tight">I agree to be contacted via email or phone regarding my inquiry.</span>
                         </label>
-                        
-                        <button type="button" class="mt-4 bg-[#2A3324] text-[#FFFFFF] py-4 px-6 text-sm uppercase tracking-widest hover:bg-[#5C715E] transition-colors flex justify-between items-center w-full group">
+
+                        <button type="submit" class="mt-4 bg-[#2A3324] text-[#FFFFFF] py-4 px-6 text-sm uppercase tracking-widest hover:bg-[#5C715E] transition-colors flex justify-between items-center w-full group">
                             Submit Request
                             <iconify-icon icon="solar:arrow-right-linear" class="text-xl group-hover:translate-x-1 transition-transform" style="stroke-width: 1.5;"></iconify-icon>
                         </button>
                     </form>
+                    <div id="form-success" class="hidden py-12 text-center">
+                        <iconify-icon icon="solar:check-circle-linear" class="text-5xl text-[#5C715E] mb-4" style="stroke-width: 1.5;"></iconify-icon>
+                        <h3 class="font-serif-custom text-2xl tracking-tight font-normal mb-2">Thank You!</h3>
+                        <p class="text-base text-[#2A3324]/70 font-light">Your message has been sent. We'll get back to you shortly.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -589,6 +593,27 @@ canvas { max-width: 100% !important; }
             </div>
         </div>
     </footer>
+
+    <!-- Web3Forms Submission Script -->
+    <script>
+    document.querySelectorAll('form[action*="web3forms"]').forEach(form => {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formData = new FormData(form);
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            }).then(res => res.json()).then(data => {
+                if (data.success) {
+                    form.style.display = 'none';
+                    form.parentElement.querySelector('#form-success').classList.remove('hidden');
+                }
+            }).catch(err => {
+                alert('Something went wrong. Please try again or call us directly.');
+            });
+        });
+    });
+    </script>
 
     <!-- Animation Scripts -->
     <script>
