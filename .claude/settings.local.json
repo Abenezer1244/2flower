@@ -55,7 +55,11 @@
       "Bash(sed -i 's/hover:bg-\\\\[#5C715E\\\\]/hover:bg-[#C4956A]/g' contact/index.html)",
       "Bash(sed -i '/class=\"text-base text-\\\\[#FFFFFF\\\\]\\\\/70 hover:text-\\\\[#FFFFFF\\\\]/s/hover:text-\\\\[#FFFFFF\\\\]/hover:text-[#C4956A]/g' contact/index.html)",
       "Bash(find . -name \"index.html\" -exec sed -i 's|<nav class=\"hidden md:flex flex-wrap gap-x-4 gap-y-2 text-sm uppercase tracking-widest text-\\\\[#2A3324\\\\]/70\">|<nav class=\"hidden md:flex flex-wrap gap-x-4 gap-y-2 text-sm uppercase tracking-widest text-[#C4956A]\">|g' {} \\\\;)",
-      "Bash(find . -name \"index.html\" -exec sed -i 's|<span class=\"text-\\\\[#C4CFC0\\\\]\">/</span>|<span class=\"text-[#C4956A]/60\">/</span>|g' {} \\\\;)"
+      "Bash(find . -name \"index.html\" -exec sed -i 's|<span class=\"text-\\\\[#C4CFC0\\\\]\">/</span>|<span class=\"text-[#C4956A]/60\">/</span>|g' {} \\\\;)",
+      "Bash(ls /c/Python*)",
+      "Read(//c/Users/Windows/AppData/Local/Programs/Python//**)",
+      "Bash(/c/Users/Windows/anaconda3/python -)",
+      "Bash(find . -name \"index.html\" -exec sed -i 's|<div class=\"flex md:justify-end items-end opacity-5 pointer-events-none select-none overflow-hidden\">|<div class=\"hidden lg:flex lg:justify-end items-end opacity-5 pointer-events-none select-none overflow-hidden\">|g' {} \\\\;)"
     ]
   }
 }
