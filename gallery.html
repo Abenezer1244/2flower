@@ -15,6 +15,16 @@
 <style>
 .font-serif-custom { font-family: 'Playfair Display', serif; }
 .font-sans-custom { font-family: 'Inter', sans-serif; }
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    .reveal-word { transform: none !important; }
+}
 </style>
 </head>
 <body class="bg-[#E3E7E0] text-[#2A3324] font-sans-custom font-light antialiased relative overflow-x-hidden">
@@ -422,6 +432,27 @@
                 }
             );
         });
+
+        const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        if (!prefersReduced) {
+            // Subtle parallax within gallery grid cells
+            gsap.utils.toArray('.webgl-measure').forEach((measure) => {
+                gsap.fromTo(measure,
+                    { yPercent: -5 },
+                    {
+                        yPercent: 5,
+                        ease: 'none',
+                        scrollTrigger: {
+                            trigger: measure,
+                            start: 'top bottom',
+                            end: 'bottom top',
+                            scrub: true
+                        }
+                    }
+                );
+            });
+        }
 
         // --- WebGL Column Split Logic ---
         const canvas = document.createElement('canvas');

@@ -19,6 +19,16 @@
     filter: grayscale(100%) contrast(90%) opacity(90%);
     mix-blend-mode: multiply;
 }
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    .reveal-word { transform: none !important; }
+}
 </style>
 </head>
 <body class="bg-[#E3E7E0] text-[#2A3324] font-sans-custom font-light antialiased relative overflow-x-hidden">
