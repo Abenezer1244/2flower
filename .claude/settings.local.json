@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mv \"generated-page \\(5\\).html\" index.html)",
+      "Bash(mv \"generated-page \\(4\\).html\" about.html)",
+      "Bash(mv \"generated-page \\(3\\).html\" services.html)",
+      "Bash(mv \"generated-page \\(2\\).html\" gallery.html)",
+      "Bash(mv \"generated-page \\(1\\).html\" contact.html)"
+    ]
+  }
+}

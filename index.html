@@ -1,0 +1,638 @@
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flower Adult Family Home LLC</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<!-- GSAP & ScrollTrigger -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<!-- Three.js for WebGL Effects -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&amp;family=Inter:wght@300;400&amp;display=swap" rel="stylesheet">
+<style>
+.font-serif-custom { font-family: 'Playfair Display', serif; }
+.font-sans-custom { font-family: 'Inter', sans-serif; }
+/* Hide default scrollbar for details content */
+details > summary { list-style: none; }
+details > summary::-webkit-details-marker { display: none; }
+</style>
+</head>
+<body class="bg-[#E3E7E0] text-[#2A3324] font-sans-custom font-light antialiased relative overflow-x-hidden">
+
+    <!-- Vertical Container Lines -->
+    <div class="fixed inset-0 pointer-events-none z-0 flex justify-center w-full">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex justify-between border-x border-[#C4CFC0]/60">
+            <div class="h-full border-r border-[#C4CFC0]/60 w-1/3 hidden md:block"></div>
+            <div class="h-full border-r border-[#C4CFC0]/60 w-1/3 hidden md:block"></div>
+        </div>
+    </div>
+
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Header Navigation -->
+        <header class="py-6 flex justify-between items-start border-b border-[#C4CFC0]">
+            <nav class="flex flex-wrap gap-x-4 gap-y-2 text-sm uppercase tracking-widest text-[#2A3324]/70">
+                <a href="#" class="hover:text-[#2A3324] transition-colors">Home</a>
+                <span>/</span>
+                <a href="#why-us" class="hover:text-[#2A3324] transition-colors">Why Us</a>
+                <span>/</span>
+                <a href="#expertise" class="hover:text-[#2A3324] transition-colors">Care Services</a>
+                <span>/</span>
+                <a href="#testimonials" class="hover:text-[#2A3324] transition-colors">Families</a>
+                <span>/</span>
+                <a href="#faq" class="hover:text-[#2A3324] transition-colors">FAQ</a>
+            </nav>
+            <div class="hidden sm:block text-[#5C715E]">
+                <iconify-icon icon="solar:heart-angle-linear" class="text-3xl" style="stroke-width: 1.5;"></iconify-icon>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="pt-16 pb-12 md:pt-24 md:pb-16 relative">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 relative z-10">
+                <h1 class="font-serif-custom text-6xl sm:text-7xl md:text-8xl lg:text-9xl leading-none tracking-tight font-normal w-full md:w-3/4">
+                    Compassionate <br>
+                    <span class="italic pr-4">Care</span> <span class="hidden md:inline-block w-24 h-[2px] bg-[#2A3324] align-middle mb-4"></span> At Home
+                </h1>
+                
+                <div class="mt-8 md:mt-0 md:w-1/4 flex flex-col items-start md:items-end text-left md:text-right">
+                    <a href="#contact" class="inline-block border-b border-[#2A3324] pb-1 mb-6 text-sm uppercase tracking-widest hover:opacity-70 transition-opacity">Schedule a Visit</a>
+                    <div class="relative w-40 h-32 md:w-48 md:h-40 group cursor-pointer webgl-measure" data-grayscale="true">
+                        <div class="absolute inset-0 w-full h-full bg-transparent">
+                            <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&amp;w=800&amp;auto=format&amp;fit=crop" alt="Cozy living area" class="webgl-img w-full h-full object-cover opacity-0">
+                        </div>
+                        <div class="absolute bottom-2 left-2 bg-[#2A3324] text-[#E3E7E0] p-1 rounded-sm flex items-center justify-center z-10">
+                            <iconify-icon icon="solar:arrow-right-linear" class="text-base" style="stroke-width: 1.5;"></iconify-icon>
+                        </div>
+                    </div>
+                    <p class="text-sm mt-4 text-[#2A3324]/70 text-left">Flower Adult Family Home LLC. Providing a safe, nurturing, and dignified living environment for your loved ones.</p>
+                </div>
+            </div>
+
+            <div class="flex justify-between items-center py-4 border-y border-[#C4CFC0] text-sm uppercase tracking-widest text-[#2A3324]/70">
+                <span>Personalized Attention</span>
+                <span class="hidden sm:block">Est. 2024</span>
+                <span>Comfortable Living</span>
+            </div>
+
+            <!-- WebGL Enhanced Hero Image -->
+            <div class="webgl-measure mt-4 w-full h-[400px] md:h-[600px] lg:h-[700px] relative">
+                <div class="absolute inset-0 w-full h-full bg-transparent">
+                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&amp;w=1600&amp;auto=format&amp;fit=crop" alt="Beautiful home exterior" class="webgl-img w-full h-full object-cover opacity-0">
+                </div>
+            </div>
+            
+            <div class="flex justify-between items-center py-3 text-sm text-[#2A3324]/70">
+                <span>Welcome Home</span>
+                <a href="#why-us" class="hover:text-[#2A3324] transition-colors flex items-center gap-2">
+                    Discover More <iconify-icon icon="solar:arrow-down-linear" class="text-lg" style="stroke-width: 1.5;"></iconify-icon>
+                </a>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section id="why-us" class="py-16 md:py-24 border-t border-[#C4CFC0]">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+                <div class="md:col-span-8">
+                    <span class="text-sm uppercase tracking-widest text-[#2A3324]/70 block mb-6">Why Choose Us</span>
+                    <h2 class="reveal-text font-serif-custom text-4xl sm:text-5xl md:text-6xl tracking-tight font-normal leading-tight pr-0 md:pr-12">
+                        At Flower Adult Family Home, we believe every individual deserves a dignified life surrounded by warmth, respect, and professional care.
+                    </h2>
+                    <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-8">
+                        <div>
+                            <div class="mb-4 text-[#5C715E]">
+                                <iconify-icon icon="solar:shield-check-linear" class="text-3xl" style="stroke-width: 1.5;"></iconify-icon>
+                            </div>
+                            <h3 class="text-xl font-normal tracking-tight mb-2">Safe Environment</h3>
+                            <p class="text-sm text-[#2A3324]/70">Secure, accessible facilities designed to prevent falls and accommodate all mobility levels comfortably.</p>
+                        </div>
+                        <div>
+                            <div class="mb-4 text-[#5C715E]">
+                                <iconify-icon icon="solar:cup-hot-linear" class="text-3xl" style="stroke-width: 1.5;"></iconify-icon>
+                            </div>
+                            <h3 class="text-xl font-normal tracking-tight mb-2">Nutritious Meals</h3>
+                            <p class="text-sm text-[#2A3324]/70">Home-cooked, balanced diets tailored to specific medical requirements and personal preferences.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:col-span-4 flex flex-col justify-between">
+                    <p class="text-base text-[#2A3324]/80 mb-8 md:mb-0">
+                        We purposefully limit our resident capacity to ensure that our caregivers can provide unhurried, personalized attention. This allows us to build deep, meaningful relationships with those we serve, making our facility truly feel like a home.
+                    </p>
+                    
+                    <!-- WebGL Enhanced Detail Image -->
+                    <div class="webgl-measure relative w-full h-48 md:h-64 mt-auto group cursor-pointer">
+                        <div class="absolute inset-0 w-full h-full bg-transparent">
+                            <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&amp;w=800&amp;auto=format&amp;fit=crop" alt="Caring interaction" class="webgl-img w-full h-full object-cover opacity-0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Expertise Section -->
+        <section id="expertise" class="py-16 md:py-24 border-t border-[#C4CFC0]">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16">
+                <div>
+                    <span class="text-sm uppercase tracking-widest text-[#2A3324]/70 block mb-6">Our Expertise</span>
+                    <h2 class="font-serif-custom text-4xl md:text-5xl tracking-tight font-normal">
+                        Comprehensive Care<br>Tailored to Individual Needs
+                    </h2>
+                </div>
+                <p class="mt-6 md:mt-0 text-base text-[#2A3324]/70 max-w-sm text-left md:text-right">
+                    Delivering highly specialized support systems to enhance quality of life and provide peace of mind for families.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-[#D5DBD1] p-8 md:p-10 flex flex-col h-full border-t-2 border-[#2A3324]">
+                    <span class="text-base font-normal text-[#2A3324]/50 mb-6">01</span>
+                    <h3 class="font-serif-custom text-3xl tracking-tight font-normal mb-8 pr-8 leading-tight">Daily Living<br>Assistance</h3>
+                    <div class="mt-auto">
+                        <p class="text-base text-[#2A3324]/70 mb-8">Respectful support with bathing, dressing, grooming, and mobility, encouraging independence whenever possible.</p>
+                        <div class="flex justify-start">
+                            <span class="text-sm uppercase tracking-widest border-b border-[#2A3324]/30 pb-1">24/7 Availability</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-[#D5DBD1] p-8 md:p-10 flex flex-col h-full border-t-2 border-[#5C715E]">
+                    <span class="text-base font-normal text-[#2A3324]/50 mb-6">02</span>
+                    <h3 class="font-serif-custom text-3xl tracking-tight font-normal mb-8 pr-8 leading-tight">Medication &amp;<br>Health Mgmt</h3>
+                    <div class="mt-auto">
+                        <p class="text-base text-[#2A3324]/70 mb-8">Rigorous tracking, administration, and coordination with primary care physicians to ensure optimal health outcomes.</p>
+                        <div class="flex justify-end">
+                            <span class="text-sm uppercase tracking-widest border-b border-[#5C715E]/30 pb-1 text-[#5C715E]">RN Oversight</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#D5DBD1] p-8 md:p-10 flex flex-col h-full border-t-2 border-[#2A3324]">
+                    <span class="text-base font-normal text-[#2A3324]/50 mb-6">03</span>
+                    <h3 class="font-serif-custom text-3xl tracking-tight font-normal mb-8 pr-8 leading-tight">Memory Care<br>&amp; Support</h3>
+                    <div class="mt-auto">
+                        <p class="text-base text-[#2A3324]/70 mb-8">A specialized, secure environment featuring cognitive engagement activities tailored for residents with dementia or Alzheimer's.</p>
+                        <div class="flex justify-end">
+                            <span class="text-sm uppercase tracking-widest border-b border-[#2A3324]/30 pb-1">Compassionate Staff</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Full Width Image Block (Parallax) -->
+        <section class="py-8 border-t border-[#C4CFC0]">
+            <div class="relative w-full h-[400px] md:h-[600px] flex items-center justify-center text-center overflow-hidden parallax-container">
+                <div class="absolute inset-0 z-0 h-[130%] -top-[15%] w-full parallax-img">
+                    <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/917d6f93-fb36-439a-8c48-884b67b35381_1600w.jpg" alt="Peaceful natural setting" class="w-full h-full object-cover brightness-75">
+                </div>
+                <div class="relative z-10 text-[#E3E7E0] px-4">
+                    <span class="text-sm uppercase tracking-widest mb-4 block">Environment</span>
+                    <h2 class="font-serif-custom text-5xl md:text-7xl lg:text-8xl tracking-tight font-normal leading-tight">
+                        A Tranquil Place<br>To Call Home
+                    </h2>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonial Section -->
+        <section id="testimonials" class="py-16 md:py-24 border-t border-[#C4CFC0]">
+            <div class="mb-12 md:mb-16">
+                <span class="text-sm uppercase tracking-widest text-[#2A3324]/70">Family Perspectives</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+                <div class="flex flex-col h-full">
+                    <div class="text-[#5C715E] mb-6">
+                        <iconify-icon icon="solar:quote-left-linear" class="text-4xl" style="stroke-width: 1.5;"></iconify-icon>
+                    </div>
+                    <p class="font-serif-custom text-2xl lg:text-3xl tracking-tight font-normal italic mb-8 flex-grow">"Finding Flower Adult Family Home was a blessing. The staff treats my mother with such profound dignity. It truly feels like an extension of our own family."</p>
+                    <div class="flex items-center gap-4 pt-6 border-t border-[#C4CFC0]/60 mt-auto">
+                        <div>
+                            <p class="text-sm uppercase tracking-widest text-[#2A3324] font-normal">Sarah M.</p>
+                            <p class="text-xs uppercase tracking-widest text-[#2A3324]/60">Daughter of Resident</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col h-full">
+                    <div class="text-[#5C715E] mb-6">
+                        <iconify-icon icon="solar:quote-left-linear" class="text-4xl" style="stroke-width: 1.5;"></iconify-icon>
+                    </div>
+                    <p class="font-serif-custom text-2xl lg:text-3xl tracking-tight font-normal italic mb-8 flex-grow">"The attention to detail in my father's medication management and daily diet has remarkably improved his overall health and mood."</p>
+                    <div class="flex items-center gap-4 pt-6 border-t border-[#C4CFC0]/60 mt-auto">
+                        <div>
+                            <p class="text-sm uppercase tracking-widest text-[#2A3324] font-normal">David P.</p>
+                            <p class="text-xs uppercase tracking-widest text-[#2A3324]/60">Son of Resident</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col h-full">
+                    <div class="text-[#5C715E] mb-6">
+                        <iconify-icon icon="solar:quote-left-linear" class="text-4xl" style="stroke-width: 1.5;"></iconify-icon>
+                    </div>
+                    <p class="font-serif-custom text-2xl lg:text-3xl tracking-tight font-normal italic mb-8 flex-grow">"The home is immaculate, bright, and welcoming. We never worry because we know she is in the most capable and loving hands."</p>
+                    <div class="flex items-center gap-4 pt-6 border-t border-[#C4CFC0]/60 mt-auto">
+                        <div>
+                            <p class="text-sm uppercase tracking-widest text-[#2A3324] font-normal">The Johnson Family</p>
+                            <p class="text-xs uppercase tracking-widest text-[#2A3324]/60">Family Members</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-16 md:py-24 border-t border-[#C4CFC0]">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                <div class="lg:col-span-5 flex flex-col justify-between">
+                    <div>
+                        <span class="text-sm uppercase tracking-widest text-[#2A3324]/70 block mb-6">Information</span>
+                        <h2 class="font-serif-custom text-4xl md:text-5xl tracking-tight font-normal mb-8">
+                            Frequently Asked<br>Questions
+                        </h2>
+                        <p class="text-base text-[#2A3324]/80 pr-0 lg:pr-12">
+                            Transitioning to an adult family home is a significant decision. We aim to provide absolute transparency regarding our care, facilities, and procedures to help you make an informed choice.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7">
+                    <div class="flex flex-col border-t border-[#C4CFC0]">
+                        <!-- Q1 -->
+                        <details class="group py-6 border-b border-[#C4CFC0] cursor-pointer">
+                            <summary class="flex items-center justify-between text-xl tracking-tight font-normal text-[#2A3324] focus:outline-none">
+                                <span>What levels of care do you provide?</span>
+                                <span class="transition-transform duration-300 group-open:rotate-180 text-[#5C715E]">
+                                    <iconify-icon icon="solar:alt-arrow-down-linear" class="text-2xl" style="stroke-width: 1.5;"></iconify-icon>
+                                </span>
+                            </summary>
+                            <div class="mt-4 text-[#2A3324]/80 text-base font-light leading-relaxed pr-8">
+                                We offer comprehensive services ranging from basic daily living assistance (bathing, dressing, meal preparation) to specialized memory care and complex medication management, all tailored to the evolving needs of each resident.
+                            </div>
+                        </details>
+                        <!-- Q2 -->
+                        <details class="group py-6 border-b border-[#C4CFC0] cursor-pointer">
+                            <summary class="flex items-center justify-between text-xl tracking-tight font-normal text-[#2A3324] focus:outline-none">
+                                <span>What is the staff-to-resident ratio?</span>
+                                <span class="transition-transform duration-300 group-open:rotate-180 text-[#5C715E]">
+                                    <iconify-icon icon="solar:alt-arrow-down-linear" class="text-2xl" style="stroke-width: 1.5;"></iconify-icon>
+                                </span>
+                            </summary>
+                            <div class="mt-4 text-[#2A3324]/80 text-base font-light leading-relaxed pr-8">
+                                To maintain our high standards of personalized attention, we keep a very low staff-to-resident ratio. This ensures our caregivers have the time to provide unhurried support and foster meaningful relationships.
+                            </div>
+                        </details>
+                        <!-- Q3 -->
+                        <details class="group py-6 border-b border-[#C4CFC0] cursor-pointer">
+                            <summary class="flex items-center justify-between text-xl tracking-tight font-normal text-[#2A3324] focus:outline-none">
+                                <span>Can you accommodate specific dietary restrictions?</span>
+                                <span class="transition-transform duration-300 group-open:rotate-180 text-[#5C715E]">
+                                    <iconify-icon icon="solar:alt-arrow-down-linear" class="text-2xl" style="stroke-width: 1.5;"></iconify-icon>
+                                </span>
+                            </summary>
+                            <div class="mt-4 text-[#2A3324]/80 text-base font-light leading-relaxed pr-8">
+                                Absolutely. All our meals are home-cooked, and we strictly adhere to prescribed dietary plans including diabetic, low-sodium, pureed, and allergy-specific diets without compromising on taste or nutrition.
+                            </div>
+                        </details>
+                        <!-- Q4 -->
+                        <details class="group py-6 border-b border-[#C4CFC0] cursor-pointer">
+                            <summary class="flex items-center justify-between text-xl tracking-tight font-normal text-[#2A3324] focus:outline-none">
+                                <span>Are family members allowed to visit at any time?</span>
+                                <span class="transition-transform duration-300 group-open:rotate-180 text-[#5C715E]">
+                                    <iconify-icon icon="solar:alt-arrow-down-linear" class="text-2xl" style="stroke-width: 1.5;"></iconify-icon>
+                                </span>
+                            </summary>
+                            <div class="mt-4 text-[#2A3324]/80 text-base font-light leading-relaxed pr-8">
+                                We believe family connection is vital. While we have recommended visiting hours to respect the rest periods of all residents, we operate an open-door policy for designated family members to visit their loved ones.
+                            </div>
+                        </details>
+                        <!-- Q5 -->
+                        <details class="group py-6 border-b border-[#C4CFC0] cursor-pointer">
+                            <summary class="flex items-center justify-between text-xl tracking-tight font-normal text-[#2A3324] focus:outline-none">
+                                <span>How are medical emergencies handled?</span>
+                                <span class="transition-transform duration-300 group-open:rotate-180 text-[#5C715E]">
+                                    <iconify-icon icon="solar:alt-arrow-down-linear" class="text-2xl" style="stroke-width: 1.5;"></iconify-icon>
+                                </span>
+                            </summary>
+                            <div class="mt-4 text-[#2A3324]/80 text-base font-light leading-relaxed pr-8">
+                                Our staff is thoroughly trained in emergency response protocols, CPR, and First Aid. We coordinate closely with local emergency services and primary physicians, ensuring immediate action and family notification in any urgent situation.
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Take Actions Today Section -->
+        <section id="contact" class="py-16 md:py-24 border-t border-[#C4CFC0]">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24">
+                <div class="flex flex-col">
+                    <span class="text-sm uppercase tracking-widest text-[#2A3324]/70 block mb-6">Take Action Today</span>
+                    <h2 class="font-serif-custom text-5xl md:text-6xl lg:text-7xl tracking-tight font-normal leading-tight mb-12">
+                        Schedule a Tour<br>of Our Home.
+                    </h2>
+                    
+                    <p class="text-base text-[#2A3324]/80 mb-12 max-w-md">
+                        Experience the warmth and professionalism of Flower Adult Family Home firsthand. Reach out to discuss how we can support your loved one.
+                    </p>
+
+                    <div class="flex flex-col gap-8 mt-auto border-t border-[#C4CFC0] pt-8">
+                        <div>
+                            <p class="text-xs uppercase tracking-widest text-[#2A3324]/50 mb-2">Location</p>
+                            <p class="text-lg font-normal">Flower Adult Family Home LLC<br>123 Serenity Lane<br>Care District</p>
+                        </div>
+                        <div>
+                            <p class="text-xs uppercase tracking-widest text-[#2A3324]/50 mb-2">Direct Contact</p>
+                            <a href="mailto:info@flowerhome.com" class="text-lg font-normal block hover:opacity-70 transition-opacity">info@flowerhome.com</a>
+                            <a href="tel:+15551234567" class="text-lg font-normal block hover:opacity-70 transition-opacity mt-1">(555) 123-4567</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-[#D5DBD1] p-8 md:p-12 border-t-2 border-[#2A3324] flex flex-col justify-center relative">
+                    <h3 class="font-serif-custom text-2xl tracking-tight font-normal mb-8">Inquiry Form</h3>
+                    <form class="flex flex-col gap-8 relative z-10">
+                        <div class="relative">
+                            <input type="text" id="name" class="w-full bg-transparent border-b border-[#2A3324]/30 py-4 text-base focus:outline-none focus:border-[#2A3324] transition-colors placeholder-[#2A3324]/50" placeholder="Your Full Name">
+                        </div>
+                        <div class="relative">
+                            <input type="email" id="email" class="w-full bg-transparent border-b border-[#2A3324]/30 py-4 text-base focus:outline-none focus:border-[#2A3324] transition-colors placeholder-[#2A3324]/50" placeholder="Email Address">
+                        </div>
+                        
+                        <!-- Custom Select Dropdown UI -->
+                        <div class="relative group cursor-pointer">
+                            <div class="w-full bg-transparent border-b border-[#2A3324]/30 py-4 flex items-center justify-between group-hover:border-[#2A3324] transition-colors">
+                                <span class="text-base text-[#2A3324]/50 group-hover:text-[#2A3324] transition-colors">Nature of Inquiry</span>
+                                <iconify-icon icon="solar:alt-arrow-down-linear" class="text-xl text-[#2A3324]/50 group-hover:text-[#2A3324] transition-colors" style="stroke-width: 1.5;"></iconify-icon>
+                            </div>
+                            <!-- Mock Dropdown Content -->
+                            <div class="absolute left-0 top-full mt-1 w-full bg-[#E3E7E0] border border-[#C4CFC0] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all z-20 shadow-sm">
+                                <div class="p-3 text-sm hover:bg-[#D5DBD1] transition-colors">Schedule a Tour</div>
+                                <div class="p-3 text-sm hover:bg-[#D5DBD1] transition-colors">Pricing Details</div>
+                                <div class="p-3 text-sm hover:bg-[#D5DBD1] transition-colors">Care Assessment</div>
+                            </div>
+                        </div>
+
+                        <div class="relative">
+                            <textarea id="message" rows="3" class="w-full bg-transparent border-b border-[#2A3324]/30 py-4 text-base focus:outline-none focus:border-[#2A3324] transition-colors resize-none placeholder-[#2A3324]/50" placeholder="How can we help you?"></textarea>
+                        </div>
+
+                        <!-- Custom Checkbox -->
+                        <label class="flex items-start gap-3 cursor-pointer group mt-2">
+                            <div class="relative flex items-center justify-center w-5 h-5 mt-0.5 border border-[#2A3324]/40 group-hover:border-[#2A3324] transition-colors rounded-sm bg-transparent shrink-0">
+                                <input type="checkbox" class="peer sr-only">
+                                <iconify-icon icon="solar:check-read-linear" class="text-base text-[#2A3324] opacity-0 peer-checked:opacity-100 transition-opacity absolute" style="stroke-width: 1.5;"></iconify-icon>
+                            </div>
+                            <span class="text-sm text-[#2A3324]/70 group-hover:text-[#2A3324] transition-colors leading-tight">I agree to be contacted via email or phone regarding my inquiry.</span>
+                        </label>
+                        
+                        <button type="button" class="mt-4 bg-[#2A3324] text-[#E3E7E0] py-4 px-6 text-sm uppercase tracking-widest hover:bg-[#5C715E] transition-colors flex justify-between items-center w-full group">
+                            Submit Request
+                            <iconify-icon icon="solar:arrow-right-linear" class="text-xl group-hover:translate-x-1 transition-transform" style="stroke-width: 1.5;"></iconify-icon>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-[#2A3324] text-[#E3E7E0] pt-16 md:pt-24 pb-8 relative z-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+                <div>
+                    <h3 class="font-serif-custom text-3xl md:text-4xl tracking-tight font-normal mb-6">Flower Adult Family Home</h3>
+                    <p class="text-base text-[#E3E7E0]/70 max-w-sm font-light">
+                        Dedicated to providing an exceptional standard of living and compassionate care in a warm, family-oriented environment.
+                    </p>
+                </div>
+                
+                <div class="flex md:justify-end items-end opacity-5 pointer-events-none select-none mt-12 md:mt-0 overflow-hidden">
+                    <h3 class="font-serif-custom text-7xl md:text-9xl leading-none tracking-tight whitespace-nowrap">Flower AFH</h3>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-[#E3E7E0]/20 text-xs uppercase tracking-widest text-[#E3E7E0]/60">
+                <nav class="flex flex-wrap justify-center gap-x-6 gap-y-4 mb-6 md:mb-0">
+                    <a href="#" class="hover:text-[#E3E7E0] transition-colors">Home</a>
+                    <a href="#why-us" class="hover:text-[#E3E7E0] transition-colors">Why Us</a>
+                    <a href="#expertise" class="hover:text-[#E3E7E0] transition-colors">Services</a>
+                    <a href="#faq" class="hover:text-[#E3E7E0] transition-colors">FAQ</a>
+                    <a href="#contact" class="hover:text-[#E3E7E0] transition-colors">Contact</a>
+                </nav>
+                <p>© 2024 Flower Adult Family Home LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Animation Scripts -->
+    <script>
+        // --- GSAP Animations ---
+        gsap.registerPlugin(ScrollTrigger);
+
+        const revealElements = document.querySelectorAll('.reveal-text');
+        revealElements.forEach(el => {
+            const text = el.innerText;
+            el.innerHTML = ''; 
+            text.split(' ').forEach(word => {
+                const wrapper = document.createElement('span');
+                wrapper.className = 'inline-block overflow-hidden align-bottom pb-1 -mb-1 mr-[0.25em]';
+                const inner = document.createElement('span');
+                inner.className = 'inline-block translate-y-[110%] reveal-word';
+                inner.innerText = word;
+                wrapper.appendChild(inner);
+                el.appendChild(wrapper);
+            });
+
+            gsap.to(el.querySelectorAll('.reveal-word'), {
+                y: '0%',
+                duration: 0.8,
+                stagger: 0.04,
+                ease: 'power3.out',
+                scrollTrigger: {
+                    trigger: el,
+                    start: 'top 85%',
+                    toggleActions: 'play none none none'
+                }
+            });
+        });
+
+        gsap.to('.parallax-img', {
+            yPercent: 20,
+            ease: 'none',
+            scrollTrigger: {
+                trigger: '.parallax-container',
+                start: 'top bottom',
+                end: 'bottom top',
+                scrub: true
+            }
+        });
+
+        // --- WebGL Column Split Logic (Retained for premium effect) ---
+        
+        const canvas = document.createElement('canvas');
+        canvas.style.position = 'fixed';
+        canvas.style.top = '0';
+        canvas.style.left = '0';
+        canvas.style.width = '100vw';
+        canvas.style.height = '100vh';
+        canvas.style.pointerEvents = 'none';
+        canvas.style.zIndex = '1'; 
+        document.body.appendChild(canvas);
+
+        const scene = new THREE.Scene();
+        const cameraZ = 600; 
+        const fov = 2 * Math.atan((window.innerHeight / 2) / cameraZ) * (180 / Math.PI);
+        const camera = new THREE.PerspectiveCamera(fov, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera.position.z = cameraZ;
+
+        const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+        const vertexShader = `
+            varying vec2 vUv;
+            void main() {
+                vUv = uv;
+                gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+            }
+        `;
+
+        const fragmentShader = `
+            uniform sampler2D uTexture;
+            uniform vec2 uImageRes;
+            uniform vec2 uPlaneRes;
+            uniform float uColIndex;
+            uniform float uCols;
+            uniform float uGrayscale;
+            varying vec2 vUv;
+
+            void main() {
+                vec2 fullUv = vec2((vUv.x + uColIndex) / uCols, vUv.y);
+                
+                vec2 ratio = vec2(
+                    min((uPlaneRes.x / uPlaneRes.y) / (uImageRes.x / uImageRes.y), 1.0),
+                    min((uPlaneRes.y / uPlaneRes.x) / (uImageRes.y / uImageRes.x), 1.0)
+                );
+                
+                vec2 uv = vec2(
+                    fullUv.x * ratio.x + (1.0 - ratio.x) * 0.5,
+                    fullUv.y * ratio.y + (1.0 - ratio.y) * 0.5
+                );
+
+                vec4 color = texture2D(uTexture, uv);
+                float gray = dot(color.rgb, vec3(0.299, 0.587, 0.114));
+                gl_FragColor = vec4(mix(color.rgb, vec3(gray), uGrayscale), color.a);
+            }
+        `;
+
+        const measures = document.querySelectorAll('.webgl-measure');
+        const items = [];
+        const textureLoader = new THREE.TextureLoader();
+        const columnsCount = 4;
+        const baseGeometry = new THREE.PlaneGeometry(1, 1);
+
+        measures.forEach(measure => {
+            const img = measure.querySelector('.webgl-img');
+            const hasGrayscale = measure.hasAttribute('data-grayscale');
+            const group = new THREE.Group();
+            const meshes = [];
+            
+            let targetGrayscale = hasGrayscale ? 1.0 : 0.0;
+            let currentGrayscale = targetGrayscale;
+
+            if (hasGrayscale) {
+                measure.addEventListener('mouseenter', () => { targetGrayscale = 0.0; });
+                measure.addEventListener('mouseleave', () => { targetGrayscale = 1.0; });
+            }
+
+            for (let i = 0; i < columnsCount; i++) {
+                const material = new THREE.ShaderMaterial({
+                    vertexShader,
+                    fragmentShader,
+                    uniforms: {
+                        uTexture: { value: null },
+                        uImageRes: { value: new THREE.Vector2(1, 1) },
+                        uPlaneRes: { value: new THREE.Vector2(1, 1) },
+                        uColIndex: { value: i },
+                        uCols: { value: columnsCount },
+                        uGrayscale: { value: currentGrayscale }
+                    },
+                    transparent: true
+                });
+
+                const mesh = new THREE.Mesh(baseGeometry, material);
+                mesh.position.x = (i / columnsCount) - 0.5 + (1 / (columnsCount * 2));
+                mesh.scale.set(1 / columnsCount, 1, 1);
+                
+                group.add(mesh);
+                meshes.push(mesh);
+            }
+
+            textureLoader.load(img.src, (texture) => {
+                meshes.forEach(mesh => {
+                    mesh.material.uniforms.uTexture.value = texture;
+                    mesh.material.uniforms.uImageRes.value.set(img.naturalWidth || 1, img.naturalHeight || 1);
+                });
+            });
+
+            scene.add(group);
+            items.push({ measure, group, meshes, hasGrayscale, get target() { return targetGrayscale; }, set current(v) { currentGrayscale = v; }, get current() { return currentGrayscale; } });
+        });
+
+        let scrollY = window.scrollY;
+        let smoothScroll = scrollY;
+        const staggers = [0.15, 0.35, 0.20, 0.40]; 
+
+        function render() {
+            scrollY = window.scrollY;
+            smoothScroll += (scrollY - smoothScroll) * 0.08;
+            
+            let velocity = scrollY - smoothScroll;
+            velocity = Math.max(Math.min(velocity, 300), -300);
+
+            items.forEach(item => {
+                const rect = item.measure.getBoundingClientRect();
+                
+                item.group.position.x = rect.left - window.innerWidth / 2 + rect.width / 2;
+                item.group.position.y = -rect.top + window.innerHeight / 2 - rect.height / 2;
+                item.group.scale.set(rect.width, rect.height, 1);
+
+                if (item.hasGrayscale) {
+                    item.current += (item.target - item.current) * 0.1;
+                }
+
+                item.meshes.forEach((mesh, i) => {
+                    const floatY = -velocity * staggers[i] * 0.8;
+                    mesh.position.y = floatY / rect.height;
+
+                    mesh.material.uniforms.uPlaneRes.value.set(rect.width, rect.height);
+                    if (item.hasGrayscale) {
+                        mesh.material.uniforms.uGrayscale.value = item.current;
+                    }
+                });
+            });
+
+            renderer.render(scene, camera);
+            requestAnimationFrame(render);
+        }
+        
+        if(items.length > 0) {
+            render();
+        }
+
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.fov = 2 * Math.atan((window.innerHeight / 2) / cameraZ) * (180 / Math.PI);
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+    </script>
+
+</body></html>
