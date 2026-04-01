@@ -59,7 +59,8 @@
       "Bash(ls /c/Python*)",
       "Read(//c/Users/Windows/AppData/Local/Programs/Python//**)",
       "Bash(/c/Users/Windows/anaconda3/python -)",
-      "Bash(find . -name \"index.html\" -exec sed -i 's|<div class=\"flex md:justify-end items-end opacity-5 pointer-events-none select-none overflow-hidden\">|<div class=\"hidden lg:flex lg:justify-end items-end opacity-5 pointer-events-none select-none overflow-hidden\">|g' {} \\\\;)"
+      "Bash(find . -name \"index.html\" -exec sed -i 's|<div class=\"flex md:justify-end items-end opacity-5 pointer-events-none select-none overflow-hidden\">|<div class=\"hidden lg:flex lg:justify-end items-end opacity-5 pointer-events-none select-none overflow-hidden\">|g' {} \\\\;)",
+      "Bash(find . -name \"index.html\" -exec sed -i 's|<h3 class=\"font-serif-custom text-4xl sm:text-5xl md:text-7xl lg:text-9xl leading-none tracking-tight whitespace-nowrap\">Flower AFH</h3>|<h3 class=\"font-serif-custom text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-none tracking-tight\">Flower AFH</h3>|g' {} \\\\;)"
     ]
   }
 }
