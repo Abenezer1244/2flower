@@ -31,11 +31,8 @@
 .font-serif-custom { font-family: 'Playfair Display', serif; }
 .font-sans-custom { font-family: 'Inter', sans-serif; }
 
-/* Custom map styling to fit theme */
-.map-filter {
-    filter: contrast(90%) opacity(90%);
-    mix-blend-mode: multiply;
-}
+/* Map styling */
+.map-filter {}
 
 html { scroll-behavior: smooth; }
 
@@ -326,12 +323,10 @@ html { scroll-behavior: smooth; }
             
             <!-- 3D Perspective Container -->
             <div class="w-full max-w-5xl h-[400px] md:h-[600px] perspective-[1200px] relative map-container">
-                <div class="map-3d-element w-full h-full relative origin-bottom preserve-3d shadow-2xl bg-[#C4CFC0]">
+                <div class="map-3d-element w-full h-full relative origin-bottom preserve-3d shadow-2xl bg-white">
                     <!-- Google Maps Iframe -->
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2680.5!2d-122.2080!3d47.9450!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s605%2074th%20St%20SW%2C%20Everett%2C%20WA%2098203!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" class="absolute inset-0 w-full h-full border-0 map-filter" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
-                    <!-- Soft theme overlay -->
-                    <div class="absolute inset-0 bg-[#FFFFFF]/10 pointer-events-none"></div>
                 </div>
             </div>
         </section>
