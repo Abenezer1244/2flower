@@ -245,7 +245,7 @@ details > summary::-webkit-details-marker { display: none; }
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
                 <!-- Specialty 1 -->
                 <div class="group cursor-pointer">
-                    <div class="webgl-measure relative w-full h-[350px] mb-8" data-grayscale="true">
+                    <div class="webgl-measure relative w-full h-[350px] mb-8">
                         <div class="absolute inset-0 w-full h-full bg-transparent">
                             <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/917d6f93-fb36-439a-8c48-884b67b35381_1600w.jpg" alt="Memory Care" class="webgl-img w-full h-full object-cover opacity-0">
                         </div>
@@ -261,7 +261,7 @@ details > summary::-webkit-details-marker { display: none; }
 
                 <!-- Specialty 2 -->
                 <div class="group cursor-pointer mt-0 md:mt-24">
-                    <div class="webgl-measure relative w-full h-[350px] mb-8" data-grayscale="true">
+                    <div class="webgl-measure relative w-full h-[350px] mb-8">
                         <div class="absolute inset-0 w-full h-full bg-transparent">
                             <img src="https://images.unsplash.com/photo-1527689638836-411945a2b57c?q=80&amp;w=800&amp;auto=format&amp;fit=crop" alt="Physical Support" class="webgl-img w-full h-full object-cover opacity-0">
                         </div>
@@ -511,13 +511,8 @@ details > summary::-webkit-details-marker { display: none; }
             const group = new THREE.Group();
             const meshes = [];
             
-            let targetGrayscale = hasGrayscale ? 1.0 : 0.0;
-            let currentGrayscale = targetGrayscale;
-
-            if (hasGrayscale) {
-                measure.addEventListener('mouseenter', () => { targetGrayscale = 0.0; });
-                measure.addEventListener('mouseleave', () => { targetGrayscale = 1.0; });
-            }
+            let targetGrayscale = 0.0;
+            let currentGrayscale = 0.0;
 
             for (let i = 0; i < columnsCount; i++) {
                 const material = new THREE.ShaderMaterial({
@@ -571,18 +566,11 @@ details > summary::-webkit-details-marker { display: none; }
                 item.group.position.y = -rect.top + window.innerHeight / 2 - rect.height / 2;
                 item.group.scale.set(rect.width, rect.height, 1);
 
-                if (item.hasGrayscale) {
-                    item.current += (item.target - item.current) * 0.1;
-                }
-
                 item.meshes.forEach((mesh, i) => {
                     const floatY = -velocity * staggers[i] * 0.8;
                     mesh.position.y = floatY / rect.height;
 
                     mesh.material.uniforms.uPlaneRes.value.set(rect.width, rect.height);
-                    if (item.hasGrayscale) {
-                        mesh.material.uniforms.uGrayscale.value = item.current;
-                    }
                 });
             });
 

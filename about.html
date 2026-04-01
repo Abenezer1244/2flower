@@ -157,7 +157,7 @@ details > summary::-webkit-details-marker { display: none; }
                         We envision a future where transitioning to an adult family home is embraced not as a loss of independence, but as a comforting continuation of life surrounded by dedicated support. We strive to set the gold standard in elder care by continuously integrating progressive health management with timeless empathy.
                     </p>
                     <p class="text-base text-[#2A3324]/80 leading-relaxed font-light mt-auto">
-                        Through rigorous staff training, transparent communication with families, and a beautifully maintained living space, our vision is to be the most trusted, sought-after care sanctuary in the community—a place where every resident thrives.
+                        Through rigorous staff training, transparent communication with families, and a beautifully maintained living space, our vision is to be the most trusted, sought-after care sanctuary in the community, a place where every resident thrives.
                     </p>
                 </div>
             </div>
@@ -187,7 +187,7 @@ details > summary::-webkit-details-marker { display: none; }
                 <div class="border-t-2 border-[#5C715E] pt-8 flex flex-col h-full">
                     <span class="text-xs uppercase tracking-widest text-[#5C715E] mb-4 block">2020</span>
                     <h3 class="font-serif-custom text-2xl tracking-tight font-normal mb-4">Building the Foundation</h3>
-                    <p class="text-sm text-[#2A3324]/80 font-light">We secured our tranquil location and began extensive renovations. Every architectural decision—from wheelchair-accessible gardens to non-slip flooring—was made with senior safety and comfort in mind.</p>
+                    <p class="text-sm text-[#2A3324]/80 font-light">We secured our tranquil location and began extensive renovations. Every architectural decision, from wheelchair-accessible gardens to non-slip flooring, was made with senior safety and comfort in mind.</p>
                 </div>
 
                 <div class="border-t-2 border-[#2A3324] pt-8 flex flex-col h-full">
@@ -216,7 +216,7 @@ details > summary::-webkit-details-marker { display: none; }
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
                 <!-- Care Team -->
                 <div class="group">
-                    <div class="webgl-measure relative w-full h-[400px] mb-6" data-grayscale="true">
+                    <div class="webgl-measure relative w-full h-[400px] mb-6">
                         <div class="absolute inset-0 w-full h-full bg-transparent">
                             <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?q=80&w=600&auto=format&fit=crop" alt="Compassionate caregiving" class="webgl-img w-full h-full object-cover opacity-0">
                         </div>
@@ -230,7 +230,7 @@ details > summary::-webkit-details-marker { display: none; }
 
                 <!-- Health Management -->
                 <div class="group mt-0 md:mt-12">
-                    <div class="webgl-measure relative w-full h-[400px] mb-6" data-grayscale="true">
+                    <div class="webgl-measure relative w-full h-[400px] mb-6">
                         <div class="absolute inset-0 w-full h-full bg-transparent">
                             <img src="https://images.unsplash.com/photo-1537368910025-700350fe46c7?q=80&w=600&auto=format&fit=crop" alt="Health and wellness coordination" class="webgl-img w-full h-full object-cover opacity-0">
                         </div>
@@ -244,7 +244,7 @@ details > summary::-webkit-details-marker { display: none; }
 
                 <!-- Nutrition & Wellness -->
                 <div class="group mt-0 md:mt-24">
-                    <div class="webgl-measure relative w-full h-[400px] mb-6" data-grayscale="true">
+                    <div class="webgl-measure relative w-full h-[400px] mb-6">
                         <div class="absolute inset-0 w-full h-full bg-transparent">
                             <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?q=80&w=600&auto=format&fit=crop" alt="Nutrition and daily wellness" class="webgl-img w-full h-full object-cover opacity-0">
                         </div>
@@ -535,13 +535,8 @@ details > summary::-webkit-details-marker { display: none; }
             const group = new THREE.Group();
             const meshes = [];
             
-            let targetGrayscale = hasGrayscale ? 1.0 : 0.0;
-            let currentGrayscale = targetGrayscale;
-
-            if (hasGrayscale) {
-                measure.addEventListener('mouseenter', () => { targetGrayscale = 0.0; });
-                measure.addEventListener('mouseleave', () => { targetGrayscale = 1.0; });
-            }
+            let targetGrayscale = 0.0;
+            let currentGrayscale = 0.0;
 
             for (let i = 0; i < columnsCount; i++) {
                 const material = new THREE.ShaderMaterial({
@@ -595,18 +590,11 @@ details > summary::-webkit-details-marker { display: none; }
                 item.group.position.y = -rect.top + window.innerHeight / 2 - rect.height / 2;
                 item.group.scale.set(rect.width, rect.height, 1);
 
-                if (item.hasGrayscale) {
-                    item.current += (item.target - item.current) * 0.1;
-                }
-
                 item.meshes.forEach((mesh, i) => {
                     const floatY = -velocity * staggers[i] * 0.8;
                     mesh.position.y = floatY / rect.height;
 
                     mesh.material.uniforms.uPlaneRes.value.set(rect.width, rect.height);
-                    if (item.hasGrayscale) {
-                        mesh.material.uniforms.uGrayscale.value = item.current;
-                    }
                 });
             });
 

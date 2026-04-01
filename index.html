@@ -115,7 +115,7 @@ details > summary::-webkit-details-marker { display: none; }
                 
                 <div class="mt-8 md:mt-0 md:w-1/4 flex flex-col items-start md:items-end text-left md:text-right">
                     <a href="#contact" class="inline-block border-b border-[#2A3324] pb-1 mb-6 text-sm uppercase tracking-widest hover:opacity-70 transition-opacity">Schedule a Visit</a>
-                    <div class="relative w-40 h-32 md:w-48 md:h-40 group cursor-pointer webgl-measure" data-grayscale="true">
+                    <div class="relative w-40 h-32 md:w-48 md:h-40 group cursor-pointer webgl-measure">
                         <div class="absolute inset-0 w-full h-full bg-transparent">
                             <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&amp;w=800&amp;auto=format&amp;fit=crop" alt="Cozy living area" class="webgl-img w-full h-full object-cover opacity-0">
                         </div>
@@ -663,13 +663,8 @@ details > summary::-webkit-details-marker { display: none; }
             const group = new THREE.Group();
             const meshes = [];
             
-            let targetGrayscale = hasGrayscale ? 1.0 : 0.0;
-            let currentGrayscale = targetGrayscale;
-
-            if (hasGrayscale) {
-                measure.addEventListener('mouseenter', () => { targetGrayscale = 0.0; });
-                measure.addEventListener('mouseleave', () => { targetGrayscale = 1.0; });
-            }
+            let targetGrayscale = 0.0;
+            let currentGrayscale = 0.0;
 
             for (let i = 0; i < columnsCount; i++) {
                 const material = new THREE.ShaderMaterial({
@@ -723,18 +718,11 @@ details > summary::-webkit-details-marker { display: none; }
                 item.group.position.y = -rect.top + window.innerHeight / 2 - rect.height / 2;
                 item.group.scale.set(rect.width, rect.height, 1);
 
-                if (item.hasGrayscale) {
-                    item.current += (item.target - item.current) * 0.1;
-                }
-
                 item.meshes.forEach((mesh, i) => {
                     const floatY = -velocity * staggers[i] * 0.8;
                     mesh.position.y = floatY / rect.height;
 
                     mesh.material.uniforms.uPlaneRes.value.set(rect.width, rect.height);
-                    if (item.hasGrayscale) {
-                        mesh.material.uniforms.uGrayscale.value = item.current;
-                    }
                 });
             });
 
