@@ -20,6 +20,8 @@
     mix-blend-mode: multiply;
 }
 
+html { scroll-behavior: smooth; }
+
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
         animation-duration: 0.01ms !important;
@@ -47,7 +49,7 @@
         <header id="site-header" class="py-6 flex justify-between items-center border-b border-[#C4CFC0] sticky top-0 bg-[#FFFFFF]/90 backdrop-blur-sm z-50 transition-all">
             <!-- Logo -->
             <a href="index.html" class="flex items-center gap-2 shrink-0">
-                <svg width="160" height="40" viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="w-[120px] sm:w-[160px] h-auto" viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <!-- Abstract flower petals -->
                     <ellipse cx="16" cy="16" rx="6" ry="12" fill="#C4956A" opacity="0.6" transform="rotate(-30 16 16)"/>
                     <ellipse cx="16" cy="16" rx="6" ry="12" fill="#5C715E" opacity="0.6" transform="rotate(30 16 16)"/>
@@ -74,7 +76,7 @@
             </nav>
 
             <!-- Mobile Hamburger -->
-            <button id="menu-toggle" class="md:hidden flex flex-col gap-1.5 p-2 z-50" aria-label="Toggle menu">
+            <button id="menu-toggle" class="md:hidden flex flex-col gap-1.5 p-2 z-50 min-w-[44px] min-h-[44px] items-center justify-center" aria-label="Toggle menu">
                 <span class="block w-6 h-[1.5px] bg-[#2A3324] transition-all menu-line-1"></span>
                 <span class="block w-6 h-[1.5px] bg-[#2A3324] transition-all menu-line-2"></span>
                 <span class="block w-4 h-[1.5px] bg-[#2A3324] transition-all menu-line-3"></span>
@@ -82,7 +84,7 @@
         </header>
 
         <!-- Mobile Menu Overlay -->
-        <div id="mobile-menu" class="fixed inset-0 bg-[#FFFFFF] z-40 flex flex-col items-center justify-center gap-8 translate-x-full transition-transform duration-500 ease-in-out md:hidden">
+        <div id="mobile-menu" class="fixed inset-0 bg-[#FFFFFF] z-40 flex flex-col items-center justify-center gap-8 translate-x-full transition-transform duration-500 ease-in-out md:hidden" onclick="if(event.target===this){menuToggle.click();}">
             <div class="mb-8">
                 <svg width="180" height="45" viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <!-- Abstract flower petals -->
@@ -137,7 +139,7 @@
         <section class="pt-16 pb-16 md:pt-32 md:pb-24 flex flex-col md:flex-row justify-between items-start border-b border-[#C4CFC0] gap-12">
             <div class="max-w-2xl">
                 <span class="text-sm uppercase tracking-widest text-[#C4956A] block mb-6 md:mb-8 reveal-text">Connect With Us</span>
-                <h1 class="font-serif-custom text-6xl sm:text-7xl lg:text-8xl leading-none tracking-tight font-normal mb-8 reveal-text">
+                <h1 class="font-serif-custom text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-none tracking-tight font-normal mb-8 reveal-text">
                     Let's Start a <br>
                     <span class="italic text-[#C4956A]">Conversation</span>
                 </h1>
@@ -185,7 +187,7 @@
                         </div>
 
                         <div class="mt-4">
-                            <button type="submit" class="group relative inline-flex items-center justify-center bg-[#2A3324] text-[#FFFFFF] px-8 py-4 uppercase tracking-widest text-xs hover:bg-[#5C715E] transition-colors overflow-hidden">
+                            <button type="submit" class="group relative inline-flex items-center justify-center bg-[#2A3324] text-[#FFFFFF] px-8 py-4 uppercase tracking-widest text-xs hover:bg-[#5C715E] transition-colors overflow-hidden w-full sm:w-auto">
                                 <span class="relative z-10 flex items-center gap-2">
                                     Send Inquiry
                                     <iconify-icon icon="solar:arrow-right-linear" class="text-base transition-transform group-hover:translate-x-1" style="stroke-width: 1.5;"></iconify-icon>
@@ -277,7 +279,7 @@
                     <p class="text-sm text-[#FFFFFF]/50">Available 24/7 for inquiries</p>
                 </div>
                 <div class="flex md:justify-end items-end opacity-5 pointer-events-none select-none overflow-hidden">
-                    <h3 class="font-serif-custom text-7xl md:text-9xl leading-none tracking-tight whitespace-nowrap">Flower AFH</h3>
+                    <h3 class="font-serif-custom text-4xl sm:text-5xl md:text-7xl lg:text-9xl leading-none tracking-tight whitespace-nowrap">Flower AFH</h3>
                 </div>
             </div>
 
