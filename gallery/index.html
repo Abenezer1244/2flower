@@ -42,7 +42,7 @@
     }
     .reveal-word { transform: none !important; }
 }
-html { scroll-behavior: smooth; }
+
 canvas { max-width: 100% !important; }
 </style>
 <script type="application/ld+json">
@@ -478,6 +478,7 @@ canvas { max-width: 100% !important; }
     <script>
         // --- GSAP Animations ---
         gsap.registerPlugin(ScrollTrigger);
+        ScrollTrigger.config({ ignoreMobileResize: true });
 
         // Text reveal for Hero
         const revealElements = document.querySelectorAll('.reveal-text');
@@ -695,7 +696,10 @@ canvas { max-width: 100% !important; }
             render();
         }
 
+        let lastWidth = window.innerWidth;
         window.addEventListener('resize', () => {
+            if (window.innerWidth === lastWidth) return;
+            lastWidth = window.innerWidth;
             camera.aspect = window.innerWidth / window.innerHeight;
             camera.fov = 2 * Math.atan((window.innerHeight / 2) / cameraZ) * (180 / Math.PI);
             camera.updateProjectionMatrix();

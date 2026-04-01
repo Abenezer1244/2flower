@@ -34,7 +34,7 @@
 /* Map styling */
 .map-filter {}
 
-html { scroll-behavior: smooth; }
+
 
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
@@ -403,6 +403,7 @@ html { scroll-behavior: smooth; }
     <!-- Animation Scripts -->
     <script>
         gsap.registerPlugin(ScrollTrigger);
+        ScrollTrigger.config({ ignoreMobileResize: true });
 
         // Text reveal animation (reused from previous design)
         const revealElements = document.querySelectorAll('.reveal-text');

@@ -35,7 +35,7 @@
 /* Hide default scrollbar for details content */
 details > summary { list-style: none; }
 details > summary::-webkit-details-marker { display: none; }
-html { scroll-behavior: smooth; }
+
 canvas { max-width: 100% !important; }
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
@@ -489,6 +489,7 @@ canvas { max-width: 100% !important; }
     <script>
         // --- GSAP Animations ---
         gsap.registerPlugin(ScrollTrigger);
+        ScrollTrigger.config({ ignoreMobileResize: true });
 
         const revealElements = document.querySelectorAll('.reveal-text');
         revealElements.forEach(el => {
@@ -722,7 +723,10 @@ canvas { max-width: 100% !important; }
             render();
         }
 
+        let lastWidth = window.innerWidth;
         window.addEventListener('resize', () => {
+            if (window.innerWidth === lastWidth) return;
+            lastWidth = window.innerWidth;
             camera.aspect = window.innerWidth / window.innerHeight;
             camera.fov = 2 * Math.atan((window.innerHeight / 2) / cameraZ) * (180 / Math.PI);
             camera.updateProjectionMatrix();
