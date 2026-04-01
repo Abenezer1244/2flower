@@ -15,6 +15,15 @@
 <style>
 .font-serif-custom { font-family: 'Playfair Display', serif; }
 .font-sans-custom { font-family: 'Inter', sans-serif; }
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    .reveal-word { transform: none !important; }
+}
 /* Hide default scrollbar for details content */
 details > summary { list-style: none; }
 details > summary::-webkit-details-marker { display: none; }
@@ -526,6 +535,63 @@ details > summary::-webkit-details-marker { display: none; }
                 scrub: true
             }
         });
+
+        // Storytelling section transitions
+        const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        if (!prefersReduced) {
+            // Fade-in sections on scroll
+            gsap.utils.toArray('section').forEach((section) => {
+                gsap.fromTo(section,
+                    { opacity: 0.3, y: 60 },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        duration: 1,
+                        ease: 'power2.out',
+                        scrollTrigger: {
+                            trigger: section,
+                            start: 'top 85%',
+                            end: 'top 40%',
+                            scrub: 1
+                        }
+                    }
+                );
+            });
+
+            // Image zoom-on-scroll effect for WebGL images
+            gsap.utils.toArray('.webgl-measure').forEach((img) => {
+                gsap.fromTo(img,
+                    { scale: 1 },
+                    {
+                        scale: 1.05,
+                        ease: 'none',
+                        scrollTrigger: {
+                            trigger: img,
+                            start: 'top bottom',
+                            end: 'bottom top',
+                            scrub: true
+                        }
+                    }
+                );
+            });
+
+            // Expertise cards staggered cascade
+            gsap.fromTo('.bg-\\[\\#D5DBD1\\]',
+                { y: 80, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.8,
+                    stagger: 0.15,
+                    ease: 'power2.out',
+                    scrollTrigger: {
+                        trigger: '#expertise',
+                        start: 'top 75%'
+                    }
+                }
+            );
+        }
 
         // --- WebGL Column Split Logic (Retained for premium effect) ---
         
