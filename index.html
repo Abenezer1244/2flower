@@ -725,6 +725,24 @@ canvas { max-width: 100% !important; }
                 );
             });
 
+            // Image zoom on enter (play once, no scrub)
+            gsap.utils.toArray('.webgl-measure').forEach((img) => {
+                gsap.fromTo(img,
+                    { scale: 0.95, opacity: 0.8 },
+                    {
+                        scale: 1,
+                        opacity: 1,
+                        duration: 1.2,
+                        ease: 'power2.out',
+                        scrollTrigger: {
+                            trigger: img,
+                            start: 'top 85%',
+                            toggleActions: 'play none none none'
+                        }
+                    }
+                );
+            });
+
             // Expertise cards staggered cascade
             gsap.fromTo('.bg-\\[\\#D5DBD1\\]',
                 { y: 80, opacity: 0 },
