@@ -709,34 +709,16 @@ canvas { max-width: 100% !important; }
             // Fade-in sections on scroll
             gsap.utils.toArray('section').forEach((section) => {
                 gsap.fromTo(section,
-                    { opacity: 0.3, y: 60 },
+                    { opacity: 0, y: 30 },
                     {
                         opacity: 1,
                         y: 0,
-                        duration: 1,
+                        duration: 0.8,
                         ease: 'power2.out',
                         scrollTrigger: {
                             trigger: section,
                             start: 'top 85%',
-                            end: 'top 40%',
-                            scrub: 1
-                        }
-                    }
-                );
-            });
-
-            // Image zoom-on-scroll effect for WebGL images
-            gsap.utils.toArray('.webgl-measure').forEach((img) => {
-                gsap.fromTo(img,
-                    { scale: 1 },
-                    {
-                        scale: 1.05,
-                        ease: 'none',
-                        scrollTrigger: {
-                            trigger: img,
-                            start: 'top bottom',
-                            end: 'bottom top',
-                            scrub: true
+                            toggleActions: 'play none none none'
                         }
                     }
                 );

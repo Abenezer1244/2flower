@@ -507,24 +507,24 @@ canvas { max-width: 100% !important; }
             });
         });
 
-        // "Crazy" Parallax Gallery Scroll Animation
+        // Gallery item reveal animation
         gsap.utils.toArray('.gallery-item').forEach((item, i) => {
-            gsap.fromTo(item, 
-                { 
-                    y: 120, 
-                    scale: 0.9, 
-                    rotation: i % 2 === 0 ? 1.5 : -1.5 
+            gsap.fromTo(item,
+                {
+                    y: 60,
+                    scale: 0.95,
+                    rotation: i % 2 === 0 ? 1 : -1
                 },
                 {
                     y: 0,
                     scale: 1,
                     rotation: 0,
+                    duration: 0.8,
                     ease: "power2.out",
                     scrollTrigger: {
                         trigger: item,
-                        start: "top 95%",
-                        end: "top 35%",
-                        scrub: 1.5
+                        start: "top 90%",
+                        toggleActions: 'play none none none'
                     }
                 }
             );
