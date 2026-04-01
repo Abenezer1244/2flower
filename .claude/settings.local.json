@@ -5,7 +5,27 @@
       "Bash(mv \"generated-page \\(4\\).html\" about.html)",
       "Bash(mv \"generated-page \\(3\\).html\" services.html)",
       "Bash(mv \"generated-page \\(2\\).html\" gallery.html)",
-      "Bash(mv \"generated-page \\(1\\).html\" contact.html)"
+      "Bash(mv \"generated-page \\(1\\).html\" contact.html)",
+      "Bash(gh auth:*)",
+      "Bash(vercel whoami:*)",
+      "Bash(vercel --prod --yes)",
+      "Bash(vercel --prod --yes --scope abenezer1244s-projects)",
+      "Bash(python3:*)",
+      "Bash(python:*)",
+      "Bash(sed:*)",
+      "Bash(grep -c \"#FCFCFB\" *.html)",
+      "Bash(grep -c \"#FFFFFF\" *.html)",
+      "WebFetch(domain:2flower-nu.vercel.app)",
+      "Bash(mkdir:*)",
+      "Bash(cp about.html about/index.html)",
+      "Bash(cp services.html services/index.html)",
+      "Bash(cp gallery.html gallery/index.html)",
+      "Bash(cp contact.html contact/index.html)",
+      "Bash(sed -i 's|2flower-nu.vercel.app/about.html|2flower-nu.vercel.app/about|g' about/index.html)",
+      "Bash(sed -i 's|2flower-nu.vercel.app/services.html|2flower-nu.vercel.app/services|g' services/index.html)",
+      "Bash(sed -i 's|2flower-nu.vercel.app/gallery.html|2flower-nu.vercel.app/gallery|g' gallery/index.html)",
+      "Bash(sed -i 's|2flower-nu.vercel.app/contact.html|2flower-nu.vercel.app/contact|g' contact/index.html)",
+      "Bash(rm:*)"
     ]
   }
 }
