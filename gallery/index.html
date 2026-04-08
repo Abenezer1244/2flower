@@ -4,26 +4,35 @@
 <meta name="description" content="Explore our warm, comfortable living spaces at Flower Adult Family Home in Everett, WA. View our private suites, communal areas, gardens, and accessible facilities.">
 <meta name="keywords" content="adult family home gallery, care facility photos, Everett WA senior home, living spaces">
 <meta name="author" content="Flower Adult Family Home LLC">
-<link rel="canonical" href="https://2flower-nu.vercel.app/gallery">
+<link rel="canonical" href="https://www.flowerafh.com/gallery">
 
 <!-- Open Graph -->
 <meta property="og:title" content="Gallery | Flower Adult Family Home LLC">
 <meta property="og:description" content="Explore our warm, comfortable living spaces designed for dignity and peace of mind in Everett, WA.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://2flower-nu.vercel.app/gallery">
+<meta property="og:url" content="https://www.flowerafh.com/gallery">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Flower Adult Family Home LLC">
+<meta property="og:image" content="https://www.flowerafh.com/assets/images/living-space-open-plan-01.webp">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 
 <!-- Twitter Card -->
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Gallery | Flower Adult Family Home LLC">
 <meta name="twitter:description" content="Explore our warm, comfortable living spaces at Flower Adult Family Home in Everett, WA.">
+<meta name="twitter:image" content="https://www.flowerafh.com/assets/images/living-space-open-plan-01.webp">
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <title>Gallery | Flower Adult Family Home LLC</title>
 <script src="https://cdn.tailwindcss.com"></script>
-<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js" defer></script>
 <!-- GSAP & ScrollTrigger -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" defer></script>
+<link rel="preload" as="image" href="/assets/images/living-space-open-plan-01.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&amp;family=Inter:wght@300;400&amp;display=swap" rel="stylesheet">
@@ -100,7 +109,7 @@
     "@type": "ResidentialCareHome",
     "name": "Flower Adult Family Home LLC",
     "description": "Compassionate 24/7 adult family home care providing personal care, medication management, memory care, and nutritious meals in a warm, family-oriented environment.",
-    "url": "https://2flower-nu.vercel.app",
+    "url": "https://www.flowerafh.com",
     "telephone": ["+1-206-504-0037", "+1-206-313-1516"],
     "email": "abeba@flowerafh.com",
     "address": {
@@ -143,7 +152,31 @@
             {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Mobility and Rehab Support"}}
         ]
     },
-    "sameAs": []
+    "sameAs": ["https://www.google.com/maps/place/Flower+Adult+Family+Home+LLC"]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.flowerafh.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Gallery", "item": "https://www.flowerafh.com/gallery/"}
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    "name": "Flower Adult Family Home Gallery",
+    "description": "Photo gallery of Flower Adult Family Home in Everett, WA — private suites, communal living areas, accessible bathrooms, outdoor spaces, and home exterior.",
+    "url": "https://www.flowerafh.com/gallery/",
+    "about": {
+        "@type": "ResidentialCareHome",
+        "name": "Flower Adult Family Home LLC"
+    },
+    "numberOfItems": 43
 }
 </script>
 </head>
@@ -274,7 +307,7 @@
                     </div>
                     <div class="w-full md:w-1/3 h-64 md:h-[400px] mt-0 md:mt-32 gallery-item">
                         <div class="relative w-full h-full overflow-hidden">
-                                <img src="/assets/images/kitchen-modern-appliances.webp" alt="Modern kitchen with stainless steel appliances" class="w-full h-full object-cover gallery-click-img">
+                                <img loading="lazy" src="/assets/images/kitchen-modern-appliances.webp" alt="Modern kitchen with stainless steel appliances" class="w-full h-full object-cover gallery-click-img">
                         </div>
                     </div>
                 </div>
@@ -283,17 +316,17 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-16">
                     <div class="h-64 md:h-[400px] gallery-item">
                         <div class="relative w-full h-full overflow-hidden">
-                                <img src="/assets/images/kitchen-dining-open-plan.webp" alt="Open kitchen and dining area" class="w-full h-full object-cover gallery-click-img">
+                                <img loading="lazy" src="/assets/images/kitchen-dining-open-plan.webp" alt="Open kitchen and dining area" class="w-full h-full object-cover gallery-click-img">
                         </div>
                     </div>
                     <div class="h-64 md:h-[500px] md:-mt-16 gallery-item">
                         <div class="relative w-full h-full overflow-hidden">
-                                <img src="/assets/images/kitchen-island-counter.webp" alt="Kitchen island counter" class="w-full h-full object-cover gallery-click-img">
+                                <img loading="lazy" src="/assets/images/kitchen-island-counter.webp" alt="Kitchen island counter" class="w-full h-full object-cover gallery-click-img">
                         </div>
                     </div>
                     <div class="h-64 md:h-[350px] md:mt-24 gallery-item">
                         <div class="relative w-full h-full overflow-hidden">
-                                <img src="/assets/images/kitchen-backsplash-island.webp" alt="Kitchen with mosaic backsplash" class="w-full h-full object-cover gallery-click-img">
+                                <img loading="lazy" src="/assets/images/kitchen-backsplash-island.webp" alt="Kitchen with mosaic backsplash" class="w-full h-full object-cover gallery-click-img">
                         </div>
                     </div>
                 </div>
@@ -301,7 +334,7 @@
                 <!-- Row 3 (1 Full Width) -->
                 <div class="w-full h-72 md:h-[700px] gallery-item">
                     <div class="relative w-full h-full overflow-hidden">
-                            <img src="/assets/images/living-room-wide-01.webp" alt="Spacious living room with comfortable recliners" class="w-full h-full object-cover gallery-click-img">
+                            <img loading="lazy" src="/assets/images/living-room-wide-01.webp" alt="Spacious living room with comfortable recliners" class="w-full h-full object-cover gallery-click-img">
                     </div>
                 </div>
 
@@ -309,12 +342,12 @@
                 <div class="flex flex-col md:flex-row gap-8 lg:gap-16 items-center">
                     <div class="w-full md:w-1/3 h-64 md:h-[350px] gallery-item">
                         <div class="relative w-full h-full overflow-hidden">
-                                <img src="/assets/images/dining-table-setting.webp" alt="Dining table set for dinner" class="w-full h-full object-cover gallery-click-img">
+                                <img loading="lazy" src="/assets/images/dining-table-setting.webp" alt="Dining table set for dinner" class="w-full h-full object-cover gallery-click-img">
                         </div>
                     </div>
                     <div class="w-full md:w-2/3 h-72 md:h-[500px] gallery-item">
                         <div class="relative w-full h-full overflow-hidden">
-                                <img src="/assets/images/dining-area-living-room.webp" alt="Dining and living area" class="w-full h-full object-cover gallery-click-img">
+                                <img loading="lazy" src="/assets/images/dining-area-living-room.webp" alt="Dining and living area" class="w-full h-full object-cover gallery-click-img">
                         </div>
                     </div>
                 </div>
@@ -323,22 +356,22 @@
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
                     <div class="h-40 md:h-[250px] gallery-item">
                         <div class="relative w-full h-full overflow-hidden">
-                                <img src="/assets/images/kitchen-full-view.webp" alt="Fully equipped kitchen" class="w-full h-full object-cover gallery-click-img">
+                                <img loading="lazy" src="/assets/images/kitchen-full-view.webp" alt="Fully equipped kitchen" class="w-full h-full object-cover gallery-click-img">
                         </div>
                     </div>
                     <div class="h-48 md:h-[350px] md:mt-12 gallery-item">
                         <div class="relative w-full h-full overflow-hidden">
-                                <img src="/assets/images/dining-area-french-door.webp" alt="Dining area with french doors" class="w-full h-full object-cover gallery-click-img">
+                                <img loading="lazy" src="/assets/images/dining-area-french-door.webp" alt="Dining area with french doors" class="w-full h-full object-cover gallery-click-img">
                         </div>
                     </div>
                     <div class="h-40 md:h-[250px] gallery-item">
                         <div class="relative w-full h-full overflow-hidden">
-                                <img src="/assets/images/living-space-open-plan-02.webp" alt="Open plan living space" class="w-full h-full object-cover gallery-click-img">
+                                <img loading="lazy" src="/assets/images/living-space-open-plan-02.webp" alt="Open plan living space" class="w-full h-full object-cover gallery-click-img">
                         </div>
                     </div>
                     <div class="h-48 md:h-[300px] md:mt-20 gallery-item">
                         <div class="relative w-full h-full overflow-hidden">
-                                <img src="/assets/images/living-room-recliners.webp" alt="Comfortable recliner seating" class="w-full h-full object-cover gallery-click-img">
+                                <img loading="lazy" src="/assets/images/living-room-recliners.webp" alt="Comfortable recliner seating" class="w-full h-full object-cover gallery-click-img">
                         </div>
                     </div>
                 </div>
@@ -347,12 +380,12 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16">
                     <div class="h-72 md:h-[600px] gallery-item">
                         <div class="relative w-full h-full overflow-hidden">
-                                <img src="/assets/images/living-room-seating-closeup.webp" alt="Living room recliner seating" class="w-full h-full object-cover gallery-click-img">
+                                <img loading="lazy" src="/assets/images/living-room-seating-closeup.webp" alt="Living room recliner seating" class="w-full h-full object-cover gallery-click-img">
                         </div>
                     </div>
                     <div class="h-72 md:h-[600px] md:mt-32 gallery-item">
                         <div class="relative w-full h-full overflow-hidden">
-                                <img src="/assets/images/living-room-wide-02.webp" alt="Bright living room with natural light" class="w-full h-full object-cover gallery-click-img">
+                                <img loading="lazy" src="/assets/images/living-room-wide-02.webp" alt="Bright living room with natural light" class="w-full h-full object-cover gallery-click-img">
                         </div>
                     </div>
                 </div>
@@ -361,17 +394,17 @@
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-16">
                     <div class="col-span-1 md:col-span-3 h-56 md:h-[300px] md:mt-24 gallery-item">
                         <div class="relative w-full h-full overflow-hidden">
-                                <img src="/assets/images/living-room-kitchen-view.webp" alt="Living room with kitchen view" class="w-full h-full object-cover gallery-click-img">
+                                <img loading="lazy" src="/assets/images/living-room-kitchen-view.webp" alt="Living room with kitchen view" class="w-full h-full object-cover gallery-click-img">
                         </div>
                     </div>
                     <div class="col-span-1 md:col-span-6 h-72 md:h-[500px] gallery-item">
                         <div class="relative w-full h-full overflow-hidden">
-                                <img src="/assets/images/living-room-entry.webp" alt="Living room and entryway" class="w-full h-full object-cover gallery-click-img">
+                                <img loading="lazy" src="/assets/images/living-room-entry.webp" alt="Living room and entryway" class="w-full h-full object-cover gallery-click-img">
                         </div>
                     </div>
                     <div class="col-span-1 md:col-span-3 h-64 md:h-[350px] md:mt-12 gallery-item">
                         <div class="relative w-full h-full overflow-hidden">
-                                <img src="/assets/images/living-room-entertainment.webp" alt="Entertainment area with TV" class="w-full h-full object-cover gallery-click-img">
+                                <img loading="lazy" src="/assets/images/living-room-entertainment.webp" alt="Entertainment area with TV" class="w-full h-full object-cover gallery-click-img">
                         </div>
                     </div>
                 </div>
@@ -380,7 +413,7 @@
                 <div class="flex justify-center w-full">
                     <div class="w-full md:w-4/5 h-72 md:h-[600px] gallery-item">
                         <div class="relative w-full h-full overflow-hidden">
-                                <img src="/assets/images/hallway-to-bedrooms.webp" alt="Hallway to private bedrooms" class="w-full h-full object-cover gallery-click-img">
+                                <img loading="lazy" src="/assets/images/hallway-to-bedrooms.webp" alt="Hallway to private bedrooms" class="w-full h-full object-cover gallery-click-img">
                         </div>
                     </div>
                 </div>
@@ -389,12 +422,12 @@
                 <div class="flex flex-col md:flex-row gap-8 lg:gap-16 items-end">
                     <div class="w-full md:w-1/2 h-72 md:h-[500px] gallery-item">
                         <div class="relative w-full h-full overflow-hidden">
-                                <img src="/assets/images/bedroom-care-bed-01.webp" alt="Private bedroom suite" class="w-full h-full object-cover gallery-click-img">
+                                <img loading="lazy" src="/assets/images/bedroom-care-bed-01.webp" alt="Private bedroom suite" class="w-full h-full object-cover gallery-click-img">
                         </div>
                     </div>
                     <div class="w-full md:w-1/2 h-64 md:h-[350px] gallery-item">
                         <div class="relative w-full h-full overflow-hidden">
-                                <img src="/assets/images/bedroom-care-bed-02.webp" alt="Comfortable care bedroom" class="w-full h-full object-cover gallery-click-img">
+                                <img loading="lazy" src="/assets/images/bedroom-care-bed-02.webp" alt="Comfortable care bedroom" class="w-full h-full object-cover gallery-click-img">
                         </div>
                     </div>
                 </div>
@@ -403,17 +436,17 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-16">
                     <div class="h-64 md:h-[300px] gallery-item">
                         <div class="relative w-full h-full overflow-hidden">
-                                <img src="/assets/images/bedroom-care-bed-03.webp" alt="Private bedroom with nightstand" class="w-full h-full object-cover gallery-click-img">
+                                <img loading="lazy" src="/assets/images/bedroom-care-bed-03.webp" alt="Private bedroom with nightstand" class="w-full h-full object-cover gallery-click-img">
                         </div>
                     </div>
                     <div class="h-64 md:h-[300px] md:mt-24 gallery-item">
                         <div class="relative w-full h-full overflow-hidden">
-                                <img src="/assets/images/bedroom-care-bed-04.webp" alt="Bedroom with garden view" class="w-full h-full object-cover gallery-click-img">
+                                <img loading="lazy" src="/assets/images/bedroom-care-bed-04.webp" alt="Bedroom with garden view" class="w-full h-full object-cover gallery-click-img">
                         </div>
                     </div>
                     <div class="h-64 md:h-[300px] md:mt-12 gallery-item">
                         <div class="relative w-full h-full overflow-hidden">
-                                <img src="/assets/images/bedroom-sunflower-01.webp" alt="Cozy bedroom with sunflower decor" class="w-full h-full object-cover gallery-click-img">
+                                <img loading="lazy" src="/assets/images/bedroom-sunflower-01.webp" alt="Cozy bedroom with sunflower decor" class="w-full h-full object-cover gallery-click-img">
                         </div>
                     </div>
                 </div>
@@ -422,12 +455,12 @@
                 <div class="flex flex-col md:flex-row gap-8 lg:gap-16 items-start">
                     <div class="w-full md:w-2/3 h-72 md:h-[600px] gallery-item">
                         <div class="relative w-full h-full overflow-hidden">
-                                <img src="/assets/images/bedroom-sunflower-02.webp" alt="Bedroom with sunflower accents" class="w-full h-full object-cover gallery-click-img">
+                                <img loading="lazy" src="/assets/images/bedroom-sunflower-02.webp" alt="Bedroom with sunflower accents" class="w-full h-full object-cover gallery-click-img">
                         </div>
                     </div>
                     <div class="w-full md:w-1/3 h-64 md:h-[400px] mt-0 md:mt-32 gallery-item">
                         <div class="relative w-full h-full overflow-hidden">
-                                <img src="/assets/images/bedroom-sunflower-03.webp" alt="Bright bedroom with window view" class="w-full h-full object-cover gallery-click-img">
+                                <img loading="lazy" src="/assets/images/bedroom-sunflower-03.webp" alt="Bright bedroom with window view" class="w-full h-full object-cover gallery-click-img">
                         </div>
                     </div>
                 </div>
@@ -436,22 +469,22 @@
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
                     <div class="h-40 md:h-[250px] gallery-item">
                         <div class="relative w-full h-full overflow-hidden">
-                                <img src="/assets/images/bedroom-nautical-01.webp" alt="Private bedroom with nautical theme" class="w-full h-full object-cover gallery-click-img">
+                                <img loading="lazy" src="/assets/images/bedroom-nautical-01.webp" alt="Private bedroom with nautical theme" class="w-full h-full object-cover gallery-click-img">
                         </div>
                     </div>
                     <div class="h-48 md:h-[350px] md:mt-12 gallery-item">
                         <div class="relative w-full h-full overflow-hidden">
-                                <img src="/assets/images/bedroom-nautical-02.webp" alt="Bedroom overhead view" class="w-full h-full object-cover gallery-click-img">
+                                <img loading="lazy" src="/assets/images/bedroom-nautical-02.webp" alt="Bedroom overhead view" class="w-full h-full object-cover gallery-click-img">
                         </div>
                     </div>
                     <div class="h-40 md:h-[250px] gallery-item">
                         <div class="relative w-full h-full overflow-hidden">
-                                <img src="/assets/images/bedroom-nautical-03.webp" alt="Spacious bedroom with natural light" class="w-full h-full object-cover gallery-click-img">
+                                <img loading="lazy" src="/assets/images/bedroom-nautical-03.webp" alt="Spacious bedroom with natural light" class="w-full h-full object-cover gallery-click-img">
                         </div>
                     </div>
                     <div class="h-48 md:h-[300px] md:mt-20 gallery-item">
                         <div class="relative w-full h-full overflow-hidden">
-                                <img src="/assets/images/activity-room.webp" alt="Activity and relaxation room" class="w-full h-full object-cover gallery-click-img">
+                                <img loading="lazy" src="/assets/images/activity-room.webp" alt="Activity and relaxation room" class="w-full h-full object-cover gallery-click-img">
                         </div>
                     </div>
                 </div>
@@ -459,7 +492,7 @@
                 <!-- Row 13 (1 Full Width) -->
                 <div class="w-full h-72 md:h-[700px] gallery-item">
                     <div class="relative w-full h-full overflow-hidden">
-                            <img src="/assets/images/bathroom-accessible-shower.webp" alt="Accessible walk-in shower with grab bars" class="w-full h-full object-cover gallery-click-img">
+                            <img loading="lazy" src="/assets/images/bathroom-accessible-shower.webp" alt="Accessible walk-in shower with grab bars" class="w-full h-full object-cover gallery-click-img">
                     </div>
                 </div>
 
@@ -467,12 +500,12 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16">
                     <div class="h-72 md:h-[600px] gallery-item">
                         <div class="relative w-full h-full overflow-hidden">
-                                <img src="/assets/images/bathroom-accessible-full.webp" alt="Accessible bathroom with safety features" class="w-full h-full object-cover gallery-click-img">
+                                <img loading="lazy" src="/assets/images/bathroom-accessible-full.webp" alt="Accessible bathroom with safety features" class="w-full h-full object-cover gallery-click-img">
                         </div>
                     </div>
                     <div class="h-72 md:h-[600px] md:mt-32 gallery-item">
                         <div class="relative w-full h-full overflow-hidden">
-                                <img src="/assets/images/bathroom-walk-in-shower.webp" alt="Modern bathroom with marble tile" class="w-full h-full object-cover gallery-click-img">
+                                <img loading="lazy" src="/assets/images/bathroom-walk-in-shower.webp" alt="Modern bathroom with marble tile" class="w-full h-full object-cover gallery-click-img">
                         </div>
                     </div>
                 </div>
@@ -481,17 +514,17 @@
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-16">
                     <div class="col-span-1 md:col-span-3 h-56 md:h-[300px] md:mt-24 gallery-item">
                         <div class="relative w-full h-full overflow-hidden">
-                                <img src="/assets/images/outdoor-patio-deck.webp" alt="Outdoor patio dining area" class="w-full h-full object-cover gallery-click-img">
+                                <img loading="lazy" src="/assets/images/outdoor-patio-deck.webp" alt="Outdoor patio dining area" class="w-full h-full object-cover gallery-click-img">
                         </div>
                     </div>
                     <div class="col-span-1 md:col-span-6 h-72 md:h-[500px] gallery-item">
                         <div class="relative w-full h-full overflow-hidden">
-                                <img src="/assets/images/exterior-front-entrance.webp" alt="Welcoming front entrance" class="w-full h-full object-cover gallery-click-img">
+                                <img loading="lazy" src="/assets/images/exterior-front-entrance.webp" alt="Welcoming front entrance" class="w-full h-full object-cover gallery-click-img">
                         </div>
                     </div>
                     <div class="col-span-1 md:col-span-3 h-64 md:h-[350px] md:mt-12 gallery-item">
                         <div class="relative w-full h-full overflow-hidden">
-                                <img src="/assets/images/exterior-accessible-ramp.webp" alt="Accessible ramp entrance" class="w-full h-full object-cover gallery-click-img">
+                                <img loading="lazy" src="/assets/images/exterior-accessible-ramp.webp" alt="Accessible ramp entrance" class="w-full h-full object-cover gallery-click-img">
                         </div>
                     </div>
                 </div>
@@ -500,12 +533,12 @@
                 <div class="flex flex-col md:flex-row gap-8 lg:gap-16 items-end">
                     <div class="w-full md:w-1/2 h-72 md:h-[500px] gallery-item">
                         <div class="relative w-full h-full overflow-hidden">
-                                <img src="/assets/images/exterior-front-view.webp" alt="Home exterior front view" class="w-full h-full object-cover gallery-click-img">
+                                <img loading="lazy" src="/assets/images/exterior-front-view.webp" alt="Home exterior front view" class="w-full h-full object-cover gallery-click-img">
                         </div>
                     </div>
                     <div class="w-full md:w-1/2 h-64 md:h-[350px] gallery-item">
                         <div class="relative w-full h-full overflow-hidden">
-                                <img src="/assets/images/exterior-front-lawn-01.webp" alt="Home with landscaped front lawn" class="w-full h-full object-cover gallery-click-img">
+                                <img loading="lazy" src="/assets/images/exterior-front-lawn-01.webp" alt="Home with landscaped front lawn" class="w-full h-full object-cover gallery-click-img">
                         </div>
                     </div>
                 </div>
@@ -514,17 +547,17 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-16">
                     <div class="h-64 md:h-[400px] gallery-item">
                         <div class="relative w-full h-full overflow-hidden">
-                                <img src="/assets/images/exterior-front-lawn-02.webp" alt="Exterior wide angle view" class="w-full h-full object-cover gallery-click-img">
+                                <img loading="lazy" src="/assets/images/exterior-front-lawn-02.webp" alt="Exterior wide angle view" class="w-full h-full object-cover gallery-click-img">
                         </div>
                     </div>
                     <div class="h-64 md:h-[500px] md:-mt-16 gallery-item">
                         <div class="relative w-full h-full overflow-hidden">
-                                <img src="/assets/images/exterior-garage.webp" alt="Home exterior with garage" class="w-full h-full object-cover gallery-click-img">
+                                <img loading="lazy" src="/assets/images/exterior-garage.webp" alt="Home exterior with garage" class="w-full h-full object-cover gallery-click-img">
                         </div>
                     </div>
                     <div class="h-64 md:h-[350px] md:mt-24 gallery-item">
                         <div class="relative w-full h-full overflow-hidden">
-                                <img src="/assets/images/exterior-with-sign.webp" alt="Flower Adult Family Home" class="w-full h-full object-cover gallery-click-img">
+                                <img loading="lazy" src="/assets/images/exterior-with-sign.webp" alt="Flower Adult Family Home" class="w-full h-full object-cover gallery-click-img">
                         </div>
                     </div>
                 </div>
@@ -533,12 +566,12 @@
                 <div class="flex flex-col md:flex-row gap-8 lg:gap-16 justify-center">
                     <div class="w-full md:w-1/2 h-72 md:h-[400px] gallery-item">
                         <div class="relative w-full h-full overflow-hidden">
-                                <img src="/assets/images/backyard-fenced.webp" alt="Private fenced backyard" class="w-full h-full object-cover gallery-click-img">
+                                <img loading="lazy" src="/assets/images/backyard-fenced.webp" alt="Private fenced backyard" class="w-full h-full object-cover gallery-click-img">
                         </div>
                     </div>
                     <div class="w-full md:w-1/2 h-72 md:h-[450px] md:mt-24 gallery-item">
                         <div class="relative w-full h-full overflow-hidden">
-                                <img src="/assets/images/backyard-wide.webp" alt="Spacious backyard garden" class="w-full h-full object-cover gallery-click-img">
+                                <img loading="lazy" src="/assets/images/backyard-wide.webp" alt="Spacious backyard garden" class="w-full h-full object-cover gallery-click-img">
                         </div>
                     </div>
                 </div>
@@ -580,6 +613,7 @@
                     <a href="/contact" class="hover:text-[#FFFFFF] transition-colors">Contact</a>
                 </nav>
                 <p>&copy; 2025 Flower Adult Family Home LLC. All rights reserved.</p>
+                <p class="mt-2 text-[#FFFFFF]/40">WA State DSHS License #758860</p>
             </div>
         </div>
     </footer>
